@@ -287,8 +287,13 @@ iframe{
     padding: 10px 20px;
     font-family: syne, sans-serif;
     font-size:medium ;
+    cursor: pointer;
+    transition: 0.3s;
 }
-
+.viewAllPrj-btn-wraper > button:hover{
+    transform: scale(1.15);
+    
+}
 
 .testimonials-section{
     padding: 10vh 4vw 10vh 4vw;  
