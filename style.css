@@ -160,7 +160,7 @@
     font-weight: 600;
     text-align: center;
     color: #2F177B;
-    margin-bottom: 1vh;
+    margin-bottom: 1.5vh;
 }
 
 .our-projects{
@@ -232,7 +232,7 @@
     font-optical-sizing: auto;
     font-style: normal;
     letter-spacing: 1px;
-    font-size: xx-large;
+    font-size: 2.7vw;
     font-weight: 500;
     text-align: center;
     color: black;
@@ -242,24 +242,32 @@
 .project-bio > p:nth-child(2){
     font-family: dmsans, sans-serif;
     color: #8B8D98;
-    font-size: 14px;
+    font-size: 1vw;
     font-weight: 400;
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 1vh;
-    padding: 0 15%;
+    padding: 0 17%;
+    line-height: 160%;
 }
-.iframe-wrapper{
+.youtube-video-cnt{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+}
+.iframe-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: left;
     flex-direction: column;
 }
 iframe{
     margin-top: 5vh;
     border-radius: 50px;
-    width: 60vw;
-    height:32vw;
+    width: 70vw;
+    height:35vw;
     outline: none;
     border: none;
 }
@@ -269,12 +277,13 @@ iframe{
 }
 .project-summary h4{
     font-family: "Syne", sans-serif;
-    font-size: larger;
+    font-size: 1.5vw;
+    font-weight: 550;
 }
 .project-summary p{
     font-family: dmsans, sans-serif;
     color: #8B8D98;
-    font-size: 14px;
+    font-size: 1vw;
     font-weight: 400;
     text-align: left;
     letter-spacing: 1px;
@@ -283,16 +292,16 @@ iframe{
 }
 
 .viewAllPrj-btn-wraper{
-    display: flex; justify-content: center; margin-top: 20px; align-items: center;
+    display: flex; justify-content: center; margin-top: 4vh; align-items: center;
 }
 .viewAllPrj-btn-wraper > button{
     background-color: #630DFF;
     color: white;
     border: none;
     border-radius: 50px;
-    padding: 10px 20px;
+    padding: .8vw 1.9vw;    
     font-family: syne, sans-serif;
-    font-size:medium ;
+    font-size: 1.2vw;
     cursor: pointer;
     transition: 0.3s;
 }
