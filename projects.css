@@ -52,8 +52,7 @@
 }
 .project {
     flex: 0 1 calc(50% - 20px); /* 2 per row with spacing */
-    box-sizing: border-box;
-    
+    box-sizing: border-box;    
     padding: 20px; /* optional for content spacing */
 }
 

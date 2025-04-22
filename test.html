@@ -129,6 +129,18 @@
   </div>
 
   <script>
+    
+console.log("Viewport Width:", window.innerWidth);
+console.log("Viewport Height:", window.innerHeight);
+
+// For more detailed information (including scrollbars):
+console.log("Outer Width (including scrollbars):", window.outerWidth);
+console.log("Outer Height (including browser UI):", window.outerHeight);
+
+// To get the visual viewport (excluding on-screen keyboards on mobile):
+console.log("Visual Viewport Width:", window.visualViewport ? window.visualViewport.width : window.innerWidth);
+console.log("Visual Viewport Height:", window.visualViewport ? window.visualViewport.height : window.innerHeight);
+
     const track = document.getElementById('carouselTrack');
     const items = document.querySelectorAll('.carousel-item');
     const totalItems = items.length;

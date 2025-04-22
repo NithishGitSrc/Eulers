@@ -1,6 +1,6 @@
 
     const prjTrack = document.getElementById("projectsCarouselTrack");
-    const prjItems = prjTrack.querySelectorAll(".project");
+    const prjItems = prjTrack.querySelectorAll(".project-wrapper");
     const prjItemWidth = prjItems[0].offsetWidth;
     console.log("prjItemWidth : " + prjItemWidth);
     let prjIndex = 1;
