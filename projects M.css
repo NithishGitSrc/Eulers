@@ -104,6 +104,7 @@ iframe{
     font-weight: lighter;
     font-weight: 500;
   }
+  
 
   .let-talk-btn {
     background-color: white;
@@ -128,8 +129,9 @@ iframe{
     font-size: 6vw;
   }
   .contact-us p {
+    font-size: 3vw;
     color: #c0c0c0;
-    margin: 25px 0;
+    margin: 4vw 0;
     font-family: "DMSans", sans-serif;
   }
 
