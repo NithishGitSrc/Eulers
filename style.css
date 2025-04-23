@@ -265,9 +265,9 @@
 }
 iframe{
     margin-top: 5vh;
-    border-radius: 50px;
+    border-radius: 30px;
     width: 70vw;
-    height:35vw;
+    height:38vw;
     outline: none;
     border: none;
 }
@@ -496,6 +496,7 @@ iframe{
     color: #C0C0C0;
     margin: 25px 0;
     font-family: "DMSans", sans-serif;
+    font-size: 1.2vw;
 }
 
 .copyright-cnt{
