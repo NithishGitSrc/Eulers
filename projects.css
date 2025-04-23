@@ -5,11 +5,9 @@
     margin: 0;
 }
 
-
-
 .our-projects-cnt{
     background-color: white;
-    padding: 5vh 20vh ;
+    padding: 5vh 10vw ;
     position: relative;
     color: black;
 }
@@ -53,36 +51,40 @@
 .project {
     flex: 0 1 calc(50% - 20px); /* 2 per row with spacing */
     box-sizing: border-box;    
-    padding: 20px; /* optional for content spacing */
+    padding: 0 2.3vw;
 }
+
 
 .project-bio > p:nth-child(1){
     font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     letter-spacing: 1px;
-    font-size: xx-large;
+    font-size: 2.7vw;
     font-weight: 500;
     text-align: center;
     color: black;
-    margin-bottom: 20px;
+    margin-bottom: 1vh;
 }
+
 
 .project-bio > p:nth-child(2){
     font-family: dmsans, sans-serif;
     color: #8B8D98;
-    font-size: 14px;
+    font-size: 1vw;
     font-weight: 400;
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 1vh;
-    padding: 0 15%;
+    padding: 0 17%;
+    line-height: 160%;
 }
 iframe{
     margin-top: 5vh;
-    border-radius: 25px;
-    height: 37vh;
+    border-radius: 30px;
+    height: 18vw;
     width: 100%;
+    border: none;
 }
 .project-summary{    
     position: relative;
