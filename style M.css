@@ -5,7 +5,7 @@
   margin: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 550px) {
   .banner-cnt {
     margin: 20vh 3vw 0 3vw;
   }
@@ -37,7 +37,7 @@
     font-size: 150%;
   }
   .our-services p:nth-child(1) {
-    font-size: 4vw;
+    font-size: 5vw;
     margin-bottom: 3vh;
   }
 
@@ -172,7 +172,7 @@
 
   .testimonial {
     width: 100%;
-    padding: 0 8vw;
+    padding: 0 9vw;
   }
   .testimonial .quote-icon {
    display: none;
@@ -188,7 +188,24 @@
   .client-info {
     margin: 5vh 0;
   }
+  .client-info img{
+    margin-right: 1.3vw;
+    width: 12vw;
+    height: 12vw;     
+  }
 
+  .client-name{
+    
+    font-size: 5vw;
+    font-weight: 600;
+    color: black;
+    
+}
+.client-position{
+    color: #8B8D98;
+    font-size: 3.5vw;
+    margin-top: 2vw;
+}
   .netwrk-partners-cnt {
     padding: 10vh 4vw 10vh 4vw;
     box-sizing: border-box;
@@ -215,57 +232,4 @@
   margin: 4vh 0; /* Top and bottom margin for vertical spacing */
 }
 
-  .contact-us-cnt {
-    padding: 10vh 7vw 0 7vw;
-  }
-
-  .contact-us-cnt > :nth-child(1) {
-    display: block;
-  }
-  .contact-us-cnt > :nth-child(1) > :nth-child(1) {
-    width: auto;
-  }
-
-  .contact-us-cnt h1 {
-    font-size: 12vw;
-    font-weight: 600;
-    text-align: left;
-    margin-bottom: 4vh;
-    font-weight: lighter;
-    font-weight: 500;
-  }
-
-  .let-talk-btn {
-    background-color: white;
-    color: black;
-    border: none;
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-family: syne, sans-serif;
-    font-size: medium;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .let-talk-btn img {
-    margin-left: 10px;
-  }
-  .contact-us {
-    margin-top: 10vh;
-  }
-  .contact-us h2{
-    font-size: 6vw;
-  }
-  .contact-us p {
-    font-size: 3vw;
-    color: #c0c0c0;
-    margin: 4vw 0;
-    font-family: "DMSans", sans-serif;
-  }
-
-  .copyright-cnt  {
-    padding: 2vh 0 ;
-    font-size: 4vw;
-  }
 }
