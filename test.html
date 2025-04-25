@@ -4,191 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fixed Infinite Carousel</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <link rel="stylesheet" href="test.css">
 
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: #f0f0f0;
-    }
-
-    .carousel-container {
-      position: relative;
-      width: 300px;
-      overflow: hidden;
-      margin: auto;
-      border-radius: 10px;
-      background: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .carousel-track {
-      display: flex;
-      transition: transform 0.4s ease-in-out;
-    }
-
-    .carousel-item {
-      width: 300px;
-      flex-shrink: 0;
-      height: 200px;
-      background: #ccc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      border-right: 2px solid white;
-    }
-
-    .buttons {
-      text-align: center;
-      margin-top: 1rem;
-    }
-
-    button {
-      padding: 10px 20px;
-      margin: 0 5px;
-      font-size: 16px;
-      cursor: pointer;
-      border: none;
-      background-color: #007bff;
-      color: white;
-      border-radius: 5px;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-    .a { 
-        position: relative;
-        width: 50%;
-        border: 2px solid green;
-        height: 300px;
-        padding: 4px;
-        box-sizing: border-box;
-        overflow: hidden; /* allow scrolling if needed */
-    }
-    
-    .b {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        box-sizing: border-box;
-        width: 100%;
-    }
-    
-    .c {
-        position: relative;
-        min-width: 100%; /* ✅ each c takes full width of .a */
-        height: 290px;
-        border: 2px red solid;
-        box-sizing: border-box;
-        flex-shrink: 0; /* ✅ prevent shrinking */
-    }
-    
-  </style>
 </head>
 <body>
 
-
-    <div class="a">
-        <div class="b">
-            <div class="c"></div>
-            <div class="c"></div>
-            <div class="c"></div>
-        </div>
-    </div>
-    <br><br><br>
-
-  <div class="carousel-container">
-    <div class="carousel-track" id="carouselTrack">
-        <!-- Clone of last slide -->
-        <div class="carousel-item" data-index="5">Slide 5</div>
-      
-        <!-- Real slides -->
-        <div class="carousel-item" data-index="1">Slide A</div>
-        <div class="carousel-item" data-index="2">Slide B</div>
-        <div class="carousel-item" data-index="3">Slide C</div>
-        <div class="carousel-item" data-index="4">Slide D</div>
-        <div class="carousel-item" data-index="5">Slide E</div>
-      
-        <!-- Clone of first slide -->
-        <div class="carousel-item" data-index="1">Slide A</div>
-      </div>
-      
+  <div class="section">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatibus.</p>
   </div>
-
-  <div class="buttons">
-    <button id="prevBtn">Prev</button>
-    <button id="nextBtn">Next</button>
+  <div class="section">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatibus.</p>
   </div>
-
-  <script>
-    
-console.log("Viewport Width:", window.innerWidth);
-console.log("Viewport Height:", window.innerHeight);
-
-// For more detailed information (including scrollbars):
-console.log("Outer Width (including scrollbars):", window.outerWidth);
-console.log("Outer Height (including browser UI):", window.outerHeight);
-
-// To get the visual viewport (excluding on-screen keyboards on mobile):
-console.log("Visual Viewport Width:", window.visualViewport ? window.visualViewport.width : window.innerWidth);
-console.log("Visual Viewport Height:", window.visualViewport ? window.visualViewport.height : window.innerHeight);
-
-    const track = document.getElementById('carouselTrack');
-    const items = document.querySelectorAll('.carousel-item');
-    const totalItems = items.length;
-    const itemWidth = items[0].offsetWidth;
-
-    let index = 1; // Start from the first real slide
-
-    // Set initial position
-    track.style.transform = `translateX(${-itemWidth * index}px)`;
-
-    document.getElementById('nextBtn').addEventListener('click', () => {
-      if (index >= totalItems - 1) return;
-      index++;
-      moveCarousel();
-    });
-
-    document.getElementById('prevBtn').addEventListener('click', () => {
-      if (index <= 0) return;
-      index--;
-      moveCarousel();
-    });
-
-    function moveCarousel() {
-      track.style.transition = 'transform 0.4s ease-in-out';
-      track.style.transform = `translateX(${-itemWidth * index}px)`;
-    }
-
-    track.addEventListener('transitionend', () => {
-        const slides = document.querySelectorAll('.carousel-item');
-        const currentSlide = slides[index];
-        const currentIndex = currentSlide.getAttribute('data-index');
-      
-        if (currentIndex == "1" && index === slides.length - 1) {
-          // Jump from cloned first to real first
-          track.style.transition = 'none';
-          index = 1;
-          track.style.transform = `translateX(${-itemWidth * index}px)`;
-        }
-      
-        if (currentIndex == "5" && index === 0) {
-          // Jump from cloned last to real last
-          track.style.transition = 'none';
-          index = slides.length - 2;
-          track.style.transform = `translateX(${-itemWidth * index}px)`;
-        }
-      });
-      
-</script>
+  <div class="section">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+  </div>
+  <div class="section">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, voluptatibus.</p>
+  </div>
 
 </body>
 </html>

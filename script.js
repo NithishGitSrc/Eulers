@@ -146,8 +146,3 @@ for (let i = 0; i < realCount; i++) {
     dotsContainer.appendChild(dot);
 }
 
-
-
-
-
-
