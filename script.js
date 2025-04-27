@@ -49,100 +49,122 @@
 
 
     
-    const dots = document.querySelectorAll(".dots .dot");
+//     const dots = document.querySelectorAll(".dots .dot");
 
-    function updateActiveDot(index) {
-        dots.forEach(dot => dot.classList.remove("active"));
-        const totalReal = dots.length;
+//     function updateActiveDot(index) {
+//         dots.forEach(dot => dot.classList.remove("active"));
+//         const totalReal = dots.length;
     
-        // Normalize index in case it's out of bounds
-        index = (index + totalReal) % totalReal;
+//         // Normalize index in case it's out of bounds
+//         index = (index + totalReal) % totalReal;
     
-        if (dots[index]) {
-            dots[index].classList.add("active");
-        }
-    }
+//         if (dots[index]) {
+//             dots[index].classList.add("active");
+//         }
+//     }
     
     
-    dots.forEach((dot, realIndex) => {
-        dot.addEventListener("click", () => {
-            // +1 to offset the clone at the beginning
-            testimonialIndex = realIndex + 1;
-            moveTestimonialCarousel();
-            updateActiveDot(realIndex);
-        });
-    });
+//     dots.forEach((dot, realIndex) => {
+//         dot.addEventListener("click", () => {
+//             // +1 to offset the clone at the beginning
+//             testimonialIndex = realIndex + 1;
+//             moveTestimonialCarousel();
+//             updateActiveDot(realIndex);
+//         });
+//     });
 
-    const testimonialTrack = document.getElementById("testimonialsCarouselTrack");
-    const testimonialItems = testimonialTrack.querySelectorAll(".testimonial");
-    const testimonialItemWidth = testimonialItems[0].offsetWidth;
-    console.log("testimonialItemWidth : " + testimonialItemWidth);
-    let testimonialIndex = 1;
+//     const testimonialTrack = document.getElementById("testimonialsCarouselTrack");
+//     const testimonialItems = testimonialTrack.querySelectorAll(".testimonial");
+//     const testimonialItemWidth = testimonialItems[0].offsetWidth;
+//     console.log("testimonialItemWidth : " + testimonialItemWidth);
+//     let testimonialIndex = 1;
 
-    // Initial position to first real slide
-    testimonialTrack.style.transform = `translateX(${-testimonialItemWidth * testimonialIndex}px)`;
+//     // Initial position to first real slide
+//     testimonialTrack.style.transform = `translateX(${-testimonialItemWidth * testimonialIndex}px)`;
 
-    document.getElementById("nextTestimonialBtn").addEventListener("click", () => {
-        if (testimonialIndex >= testimonialItems.length - 1) return;
-        testimonialIndex++;
-        moveTestimonialCarousel();
-    });
+//     document.getElementById("nextTestimonialBtn").addEventListener("click", () => {
+//         if (testimonialIndex >= testimonialItems.length - 1) return;
+//         testimonialIndex++;
+//         moveTestimonialCarousel();
+//     });
 
-    document.getElementById("prevTestimonialBtn").addEventListener("click", () => {
-        if (testimonialIndex <= 0) return;
-        testimonialIndex--;
-        moveTestimonialCarousel();
-    });
+//     document.getElementById("prevTestimonialBtn").addEventListener("click", () => {
+//         if (testimonialIndex <= 0) return;
+//         testimonialIndex--;
+//         moveTestimonialCarousel();
+//     });
 
-    function moveTestimonialCarousel() {
-        testimonialTrack.style.transition = "transform 0.5s ease-in-out";
-        testimonialTrack.style.transform = `translateX(${-testimonialItemWidth * testimonialIndex}px)`;
+//     function moveTestimonialCarousel() {
+//         testimonialTrack.style.transition = "transform 0.5s ease-in-out";
+//         testimonialTrack.style.transform = `translateX(${-testimonialItemWidth * testimonialIndex}px)`;
         
-        // Update dots (skip for cloned ends)
-        if (testimonialIndex > 0 && testimonialIndex < testimonialItems.length - 1) {
-            updateActiveDot(testimonialIndex - 1);
-        }
-    }
+//         // Update dots (skip for cloned ends)
+//         if (testimonialIndex > 0 && testimonialIndex < testimonialItems.length - 1) {
+//             updateActiveDot(testimonialIndex - 1);
+//         }
+//     }
     
 
-    testimonialTrack.addEventListener("transitionend", () => {
-        const allItems = testimonialTrack.querySelectorAll(".testimonial");
-        const current = allItems[testimonialIndex];
-        const currentIndex = current.getAttribute("data-index");
+//     testimonialTrack.addEventListener("transitionend", () => {
+//         const allItems = testimonialTrack.querySelectorAll(".testimonial");
+//         const current = allItems[testimonialIndex];
+//         const currentIndex = current.getAttribute("data-index");
 
-        if (currentIndex == "1" && testimonialIndex === allItems.length - 1) {
-            // Reached clone of first -> jump to real first
-            testimonialTrack.style.transition = "none";
-            testimonialIndex = 1;
-            testimonialTrack.style.transform = `translateX(${-testimonialItemWidth * testimonialIndex}px)`;
-        }
+//         if (currentIndex == "1" && testimonialIndex === allItems.length - 1) {
+//             // Reached clone of first -> jump to real first
+//             testimonialTrack.style.transition = "none";
+//             testimonialIndex = 1;
+//             testimonialTrack.style.transform = `translateX(${-testimonialItemWidth * testimonialIndex}px)`;
+//         }
 
-        if (currentIndex == "2" && testimonialIndex === 0) {
-            // Reached clone of last -> jump to real last
-            testimonialTrack.style.transition = "none";
-            testimonialIndex = allItems.length - 2;
-            testimonialTrack.style.transform = `translateX(${-testimonialItemWidth * testimonialIndex}px)`;
-        }
-        updateActiveDot(testimonialIndex - 1);
-    });
+//         if (currentIndex == "2" && testimonialIndex === 0) {
+//             // Reached clone of last -> jump to real last
+//             testimonialTrack.style.transition = "none";
+//             testimonialIndex = allItems.length - 2;
+//             testimonialTrack.style.transform = `translateX(${-testimonialItemWidth * testimonialIndex}px)`;
+//         }
+//         updateActiveDot(testimonialIndex - 1);
+//     });
 
 
-    const allTestimonials = testimonialTrack.querySelectorAll(".testimonial");
+//     const allTestimonials = testimonialTrack.querySelectorAll(".testimonial");
     
-    // Assuming 1 clone at start and end => real testimonials = total - 2
-const realCount = allTestimonials.length - 2;
+//     // Assuming 1 clone at start and end => real testimonials = total - 2
+// const realCount = allTestimonials.length - 2;
 
-// Get the dots container
-const dotsContainer = document.querySelector(".dots");
+// // Get the dots container
+// const dotsContainer = document.querySelector(".dots");
 
-// Clear any existing dots (if needed)
-dotsContainer.innerHTML = "";
+// // Clear any existing dots (if needed)
+// dotsContainer.innerHTML = "";
 
-// Create dots based on real testimonials
-for (let i = 0; i < realCount; i++) {
-    const dot = document.createElement("div");
-    dot.classList.add("dot");
-    dot.setAttribute("data-index", i);
-    dotsContainer.appendChild(dot);
+// // Create dots based on real testimonials
+// for (let i = 0; i < realCount; i++) {
+//     const dot = document.createElement("div");
+//     dot.classList.add("dot");
+//     dot.setAttribute("data-index", i);
+//     dotsContainer.appendChild(dot);
+// }
+
+
+
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("testimonial");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "flex";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
-

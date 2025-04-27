@@ -362,7 +362,7 @@ iframe{
 .testimonial{
     
     position: relative;    
-    display: flex;
+    display: none;
     justify-content: left;    
     transition: transform 0.5s ease-in-out;
     /* border: 4px solid green; */
@@ -372,6 +372,17 @@ iframe{
     padding: 0 4vw;
    
 }
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
 .testimonial .quote-icon{
     height: 4vw;
     padding-right: 5vw;
