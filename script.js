@@ -150,21 +150,55 @@
 
 
 let slideIndex = 0;
-showSlides();
+let slides = document.getElementsByClassName("testimonial");
+let dots = document.getElementsByClassName("dot");
+let autoSlideInterval = setInterval(showSlides, 5000); // Auto-slide every 2 seconds
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("testimonial");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+function showSlides(n) {
+  // If n is given (from button/dot click), use that, else move to next
+  if (n !== undefined) {
+    slideIndex = n;
+  } else {
+    slideIndex++;
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
+
+  if (slideIndex >= slides.length) { slideIndex = 0; }
+  if (slideIndex < 0) { slideIndex = slides.length - 1; }
+
+  // Hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  
+  // Remove 'active' class from all dots
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "flex";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+
+  // Show current slide and activate corresponding dot
+  slides[slideIndex].style.display = "flex";
+  dots[slideIndex].className += " active";
 }
+
+// Next/Prev controls
+document.getElementById("prevTestimonialBtn").addEventListener("click", function() {  
+  showSlides(slideIndex - 1);
+});
+
+document.getElementById("nextTestimonialBtn").addEventListener("click", function() {
+  
+  showSlides(slideIndex + 1);
+});
+
+// Dot controls
+for (let i = 0; i < dots.length; i++) {
+  (function(index) {
+    dots[index].addEventListener("click", function() {
+      
+      showSlides(index);
+    });
+  })(i);
+}
+
+// Start the first slide
+showSlides(slideIndex);
