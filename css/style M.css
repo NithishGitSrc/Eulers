@@ -11,7 +11,8 @@
   }
   .banner-cnt div:nth-child(1) {
     font-size: 7vw;
-    font-weight: 600;
+    font-weight: 600;    
+    margin-bottom: 3vh;
   }
 
   .banner-cnt img {
@@ -22,10 +23,10 @@
   .banner-cnt div:nth-child(2) {
     font-style: normal;
     font-size: 7vw;
-    font-weight: 600;
     letter-spacing: 1px;
     padding: 4vh 0;
-    white-space: pre-line;
+    
+    
   }
   .banner-cnt div:nth-child(3) {
     font-size: 3vw;

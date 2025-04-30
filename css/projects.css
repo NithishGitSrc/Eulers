@@ -4,9 +4,23 @@
     padding: 0;
     margin: 0;
 }
+/* For Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* For Firefox */
+  html {
+    scrollbar-width: none;
+  }
+  
+  /* For Internet Explorer and older Edge */
+  body {
+    -ms-overflow-style: none;
+  }
 
 html{
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
 }
 .section{
     
