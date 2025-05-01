@@ -19,17 +19,12 @@ body::-webkit-scrollbar {
     -ms-overflow-style: none;
   }
 html{
-    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
-    overscroll-behavior-y: contain;
 }
 body{
     scroll-behavior: smooth;
 }
-.section{
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
-}
+
 .banner{
     height: 100vh;
     background: linear-gradient(180deg, #070113 0%, #630DFF 53.52%, #FFFFFF 77.01%);
@@ -54,7 +49,7 @@ body{
     font-optical-sizing: auto;
     font-style: normal;
     letter-spacing: 1.5px;
-    font-size: 4.5vmax;
+    font-size: 4.5vw;
     font-weight: 500;
     display: flex;
     justify-content: center;
@@ -70,7 +65,7 @@ body{
     font-family: "Syne", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: 2vmax;
+    font-size: 2vw;
     font-weight: 600;
     letter-spacing: 1.5px;
     padding: 4vh 10vw;
@@ -89,9 +84,9 @@ body{
     justify-content: center;
     text-wrap: wrap;
     align-items: center;
-    font-size: 1vmax;
+    font-size: 1.1vw;
     color: #C0C0C0;
-    margin: 0 12vw;
+    margin: 0 13vw;
     text-align: center;
 }
 
@@ -320,7 +315,7 @@ iframe{
 .viewAllPrj-btn-wraper{
     display: flex; justify-content: center; margin-top: 4vh; align-items: center;
 }
-.viewAllPrj-btn-wraper > button{
+.viewAllPrj-btn-wraper  button{
     background-color: #630DFF;
     color: white;
     border: none;
@@ -331,14 +326,14 @@ iframe{
     cursor: pointer;
     transition: 0.3s;
 }
-.viewAllPrj-btn-wraper > button:hover{
+.viewAllPrj-btn-wraper  button:hover{
     transform: scale(1.15);
     
 }
 
 .testimonials-section{
     position: relative;
-    padding: 15vh 6vw 10vh 6vw;  
+    padding: 100px 6vw 10vmin 6vw;  
     box-sizing: border-box;
     font-family: syne, sans-serif;
 }
