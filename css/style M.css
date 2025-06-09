@@ -102,7 +102,7 @@
   .project {
 
     display: block;
-    padding: 0 1vw;    
+    padding: 0 4vw;    
     box-sizing: border-box;
    
 }
@@ -116,10 +116,9 @@
 
   .project-bio > p:nth-child(2) {
     
-    font-size: 3.5vw;
-    
+    font-size: 3.7vw;    
     padding: 0 ;
-    text-align:left;
+    text-align:center;
   }
   iframe {
     margin-top: 5vh;
